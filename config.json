@@ -1,0 +1,35 @@
+{
+  "system": {
+    "source": "onprem",
+    "hostname": "server01",
+    "ip_address": "10.10.20.30"
+  },
+  "metrics": [
+    "cpu_usage",
+    "memory_usage",
+    "disk_root_usage"
+  ],
+  "thresholds": {
+    "cpu_usage": {
+      "warning": 75,
+      "critical": 90
+    },
+    "memory_usage": {
+      "warning": 80,
+      "critical": 95
+    },
+    "disk_root_usage": {
+      "warning": 80,
+      "critical": 90
+    }
+  },
+  "custom_disk_metrics": {
+    "disk_backup_usage": "/backup"
+  },
+  "api": {
+    "enabled": true,
+    "url": "http://127.0.0.1:5000/metrics",
+    "api_key": "KH-CS2-API-KEY-2026",
+    "timeout": 10
+  }
+}
